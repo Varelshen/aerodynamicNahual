@@ -3,9 +3,9 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://WorldAssets/Terrain/Fondo.jpg" type="Texture" id=2]
 [ext_resource path="res://scripts/obstaclesScripts/ObstaclesGenerator1.gd" type="Script" id=3]
-[ext_resource path="res://Audios/L3_Ancient Mystery Waltz Presto.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Audios/L2_Ancient Mystery Waltz Vivace.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Audios/L1_Ancient Mystery Waltz Allegro.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Audios/AudiosUnderCCbyAttribution4.0/L3_Ancient Mystery Waltz Presto.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Audios/AudiosUnderCCbyAttribution4.0/L2_Ancient Mystery Waltz Vivace.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Audios/AudiosUnderCCbyAttribution4.0/L1_Ancient Mystery Waltz Allegro.ogg" type="AudioStream" id=6]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Obstacles venida"

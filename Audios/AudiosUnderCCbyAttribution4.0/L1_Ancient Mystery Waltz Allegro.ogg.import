@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/L1_Ancient Mystery Waltz Allegro.ogg-b70cb8e03fb2aac4376f7f47f9349ed4.oggstr"
+
+[deps]
+
+source_file="res://Audios/AudiosUnderCCbyAttribution4.0/L1_Ancient Mystery Waltz Allegro.ogg"
+dest_files=[ "res://.import/L1_Ancient Mystery Waltz Allegro.ogg-b70cb8e03fb2aac4376f7f47f9349ed4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

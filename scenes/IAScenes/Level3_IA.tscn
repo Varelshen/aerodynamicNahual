@@ -20,7 +20,7 @@
 [ext_resource path="res://Hud/WinScreen/ButtonHover.png" type="Texture" id=18]
 [ext_resource path="res://Hud/WinScreen/WinScreen.png" type="Texture" id=19]
 [ext_resource path="res://Hud/WinScreen/TextVictoryRemindero.png" type="Texture" id=20]
-[ext_resource path="res://Audios/Win_Bassa Island Game Loop.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Audios/AudiosUnderCCbyAttribution4.0/Win_Bassa Island Game Loop.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Audios/Wind_524203__filmmakersmanual__forest-wind-04.ogg" type="AudioStream" id=22]
 [ext_resource path="res://icon.png" type="Texture" id=23]
 [ext_resource path="res://Atkinson-Hyperlegible-Font-Print-and-Web-2020-0514/AtkinsonHyperlegible-Bold.ttf" type="DynamicFontData" id=24]

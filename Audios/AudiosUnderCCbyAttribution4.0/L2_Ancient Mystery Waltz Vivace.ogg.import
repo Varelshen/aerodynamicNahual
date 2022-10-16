@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/L2_Ancient Mystery Waltz Vivace.ogg-674ffcacf8542af9b4c69a4e6cf70597.oggstr"
+
+[deps]
+
+source_file="res://Audios/AudiosUnderCCbyAttribution4.0/L2_Ancient Mystery Waltz Vivace.ogg"
+dest_files=[ "res://.import/L2_Ancient Mystery Waltz Vivace.ogg-674ffcacf8542af9b4c69a4e6cf70597.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

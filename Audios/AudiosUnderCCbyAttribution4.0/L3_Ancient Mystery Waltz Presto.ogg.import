@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/L3_Ancient Mystery Waltz Presto.ogg-f70d701633a0ecca03fd1747142a7d39.oggstr"
+
+[deps]
+
+source_file="res://Audios/AudiosUnderCCbyAttribution4.0/L3_Ancient Mystery Waltz Presto.ogg"
+dest_files=[ "res://.import/L3_Ancient Mystery Waltz Presto.ogg-f70d701633a0ecca03fd1747142a7d39.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
