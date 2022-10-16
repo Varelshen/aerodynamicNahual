@@ -1,0 +1,314 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/Trees_Palm.gd" type="Script" id=1]
+[ext_resource path="res://WorldAssets/Terrain/FondoTest.jpg" type="Texture" id=2]
+[ext_resource path="res://WorldAssets/Terrain/PalmTree/BaseTree.png" type="Texture" id=3]
+[ext_resource path="res://WorldAssets/Terrain/PalmTree/Leafs.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax/ParallaxBottom3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax/ParallaxBottom3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, -2460 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax/ParallaxBottom2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax/ParallaxBottom2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, -960 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax/ParallaxBottom:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax/ParallaxBottom:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, 540 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "TressMovement"
+length = 15.0
+loop = true
+step = 0.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax/ParallaxBottom3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 15 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax/ParallaxBottom3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 10, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, -2460 ), Vector2( -312, -960 ), Vector2( -312, 540 ), Vector2( -312, 2040 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax/ParallaxBottom2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax/ParallaxBottom2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, -960 ), Vector2( -312, 540 ), Vector2( -312, 2040 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax/ParallaxBottom:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ true, false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax/ParallaxBottom:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, 540 ), Vector2( -312, 2040 ), Vector2( -312, -960 ) ]
+}
+
+[node name="Palms_Trees" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="FondoTest" type="Sprite" parent="."]
+visible = false
+position = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
+[node name="FondoTest2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 960, -960 )
+texture = ExtResource( 2 )
+
+[node name="FondoTest3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 960, -2460 )
+texture = ExtResource( 2 )
+
+[node name="Parallax" type="Node2D" parent="."]
+position = Vector2( 1201, 0 )
+
+[node name="ParallaxBottom3" type="Sprite" parent="Parallax"]
+light_mask = 32
+position = Vector2( -312, -2460 )
+
+[node name="Tree13" type="Node2D" parent="Parallax/ParallaxBottom3"]
+position = Vector2( -50, 69 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom3/Tree13"]
+position = Vector2( 994, 79 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom3/Tree13"]
+position = Vector2( 904, -217 )
+scale = Vector2( 0.917, 0.783 )
+texture = ExtResource( 4 )
+
+[node name="Tree15" type="Node2D" parent="Parallax/ParallaxBottom3"]
+position = Vector2( -49, 608 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom3/Tree15"]
+position = Vector2( 1033, 300 )
+rotation = 0.14699
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom3/Tree15"]
+position = Vector2( 997, -17 )
+rotation = -0.0713054
+scale = Vector2( 0.992, 0.856 )
+texture = ExtResource( 4 )
+
+[node name="Tree17" type="Node2D" parent="Parallax/ParallaxBottom3"]
+position = Vector2( -1775, 305 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom3/Tree17"]
+position = Vector2( 1000, 211 )
+scale = Vector2( 0.775, 0.903 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom3/Tree17"]
+position = Vector2( 919, -81 )
+scale = Vector2( 0.841, 0.663 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxBottom2" type="Sprite" parent="Parallax"]
+light_mask = 32
+position = Vector2( -312, -960 )
+
+[node name="Tree7" type="Node2D" parent="Parallax/ParallaxBottom2"]
+position = Vector2( -23, -290 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom2/Tree7"]
+position = Vector2( 1030, 248 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom2/Tree7"]
+position = Vector2( 919, -91 )
+scale = Vector2( 0.971, 0.783 )
+texture = ExtResource( 4 )
+
+[node name="Tree9" type="Node2D" parent="Parallax/ParallaxBottom2"]
+position = Vector2( 14, 221 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom2/Tree9"]
+position = Vector2( 1025, 286 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom2/Tree9"]
+position = Vector2( 912, -55 )
+scale = Vector2( 0.888, 0.856 )
+texture = ExtResource( 4 )
+
+[node name="Tree10" type="Node2D" parent="Parallax/ParallaxBottom2"]
+position = Vector2( -1760, -345 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom2/Tree10"]
+position = Vector2( 993, 211 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom2/Tree10"]
+position = Vector2( 919, -91 )
+scale = Vector2( 0.997, 0.783 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxBottom" type="Sprite" parent="Parallax"]
+light_mask = 32
+position = Vector2( -312, 540 )
+
+[node name="Tree1" type="Node2D" parent="Parallax/ParallaxBottom"]
+position = Vector2( 51, 86 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom/Tree1"]
+position = Vector2( 996, 272 )
+rotation = 0.165374
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom/Tree1"]
+position = Vector2( 951, -55 )
+rotation = 0.0714727
+scale = Vector2( 1.129, 0.856 )
+texture = ExtResource( 4 )
+
+[node name="Tree5" type="Node2D" parent="Parallax/ParallaxBottom"]
+position = Vector2( -1702, -293 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom/Tree5"]
+position = Vector2( 998, 239 )
+scale = Vector2( 0.775, 0.903 )
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom/Tree5"]
+position = Vector2( 919, -81 )
+rotation = -0.152783
+scale = Vector2( 0.841, 0.663 )
+texture = ExtResource( 4 )
+
+[node name="Tree6" type="Node2D" parent="Parallax/ParallaxBottom"]
+position = Vector2( -1728, 157 )
+
+[node name="BaseTree" type="Sprite" parent="Parallax/ParallaxBottom/Tree6"]
+position = Vector2( 1033, 224 )
+rotation = 0.162535
+texture = ExtResource( 3 )
+
+[node name="Leafs" type="Sprite" parent="Parallax/ParallaxBottom/Tree6"]
+position = Vector2( 978, -75 )
+rotation = -0.0064401
+scale = Vector2( 1.129, 0.856 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+playback_speed = 1.9
+anims/RESET = SubResource( 4 )
+anims/TressMovement = SubResource( 3 )

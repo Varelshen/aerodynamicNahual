@@ -1,0 +1,718 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://WorldAssets/Player/player.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/PlayerONE.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://scripts/X_Poss.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Y_Poss.gd" type="Script" id=5]
+[ext_resource path="res://WorldAssets/Player/Aura/Aura1.png" type="Texture" id=6]
+[ext_resource path="res://WorldAssets/Player/PlayerFrames/Frame3.png" type="Texture" id=7]
+[ext_resource path="res://WorldAssets/Player/PlayerFrames/Frame2.png" type="Texture" id=8]
+[ext_resource path="res://WorldAssets/Player/PlayerFrames/Frame1.png" type="Texture" id=9]
+[ext_resource path="res://WorldAssets/Player/Aura/Aura2.png" type="Texture" id=10]
+[ext_resource path="res://WorldAssets/Player/Aura/Aura3.png" type="Texture" id=11]
+[ext_resource path="res://WorldAssets/Player/Aura/Aura4.png" type="Texture" id=12]
+[ext_resource path="res://WorldAssets/Player/Aura/Aura5.png" type="Texture" id=13]
+[ext_resource path="res://WorldAssets/MenusUI/Gameplay/BarColor.png" type="Texture" id=14]
+[ext_resource path="res://WorldAssets/MenusUI/Gameplay/BackMedidor.png" type="Texture" id=15]
+[ext_resource path="res://WorldAssets/Terrain/Fondo.jpg" type="Texture" id=16]
+[ext_resource path="res://WorldAssets/MenusUI/Gameplay/Mask.png" type="Texture" id=17]
+[ext_resource path="res://WorldAssets/MenusUI/Gameplay/BackMedidorP2.png" type="Texture" id=18]
+[ext_resource path="res://WorldAssets/Player/Recuperandoce.png" type="Texture" id=19]
+[ext_resource path="res://WorldAssets/MenusUI/ProgressBar/Lianas.png" type="Texture" id=20]
+[ext_resource path="res://Atkinson-Hyperlegible-Font-Print-and-Web-2020-0514/AtkinsonHyperlegible-Bold.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://Audios/Hit.wav" type="AudioStream" id=22]
+[ext_resource path="res://WorldAssets/Player/PlayerFrames/scenesHit.tres" type="Animation" id=23]
+[ext_resource path="res://scenes/Transition.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Audios/BellRing_378911__13gkopeckak__bell.wav" type="AudioStream" id=25]
+[ext_resource path="res://Audios/ChainSound_163383__under7dude__heavy-breathing.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Audios/HeavyBreathing_163383__under7dude__heavy-breathing.ogg" type="AudioStream" id=27]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.00001
+height = 76.0002
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 46.8565
+height = 55.5088
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 7.54339, 5.42098 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "AnimPlayer"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite/Frame1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, false, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite/Frame2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerSprite/Frame3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerSprite/Frame4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 4, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, false, true ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite/Frame1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite/Frame2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PlayerSprite/Frame3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("PlayerSprite/Frame4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Aura"
+length = 4.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Aura/AuraSub/Aura1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Aura/AuraSub/Aura2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Aura/AuraSub/Aura3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Aura/AuraSub/Aura4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Aura/AuraSub/Aura5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Aura/AuraSub/Aura1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Aura/AuraSub/Aura2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Aura/AuraSub/Aura3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Aura/AuraSub/Aura4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Aura/AuraSub/Aura5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Aura:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Aura/AuraSub:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "FixDangModulateError"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Aura:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Aura:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../PlayerSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Aura:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Aura:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../PlayerSprite/BaseLifeCollitionP1:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../PlayerSprite/BaseLifeCollitionP1:monitorable")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../PlayerSprite/AntiAura:monitoring")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../PlayerSprite/AntiAura:monitorable")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../PlayerSprite/PuntosStamina:monitoring")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../PlayerSprite/PuntosStamina:monitorable")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Aura:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../Aura/AuraSub:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=8]
+light_mode = 2
+
+[sub_resource type="DynamicFont" id=9]
+font_data = ExtResource( 21 )
+
+[node name="PlayerONE" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="X_Position" type="KinematicBody2D" parent="."]
+visible = false
+script = ExtResource( 4 )
+
+[node name="Icon" type="Sprite" parent="X_Position"]
+texture = ExtResource( 3 )
+
+[node name="Y_Position" type="KinematicBody2D" parent="."]
+visible = false
+rotation = -1.5708
+script = ExtResource( 5 )
+
+[node name="Icon2" type="Sprite" parent="Y_Position"]
+texture = ExtResource( 3 )
+
+[node name="Under" type="Sprite" parent="Y_Position"]
+rotation = 1.5708
+texture = ExtResource( 3 )
+
+[node name="PlayerSprite" type="Sprite" parent="."]
+position = Vector2( -1, 4 )
+scale = Vector2( 0.481, 0.442565 )
+
+[node name="Frame1" type="Sprite" parent="PlayerSprite"]
+position = Vector2( 29.106, -40.672 )
+scale = Vector2( 0.524, 0.524 )
+texture = ExtResource( 9 )
+
+[node name="Frame2" type="Sprite" parent="PlayerSprite"]
+position = Vector2( 29.106, -40.672 )
+scale = Vector2( 0.524, 0.524 )
+texture = ExtResource( 8 )
+
+[node name="Frame3" type="Sprite" parent="PlayerSprite"]
+position = Vector2( 29.106, -40.672 )
+scale = Vector2( 0.524, 0.524 )
+texture = ExtResource( 7 )
+
+[node name="Frame4" type="Sprite" parent="PlayerSprite"]
+position = Vector2( 29.106, -40.672 )
+scale = Vector2( 0.524, 0.524 )
+texture = ExtResource( 8 )
+
+[node name="Recuperandoce" type="Sprite" parent="PlayerSprite"]
+visible = false
+position = Vector2( -16.1192, -309.274 )
+scale = Vector2( 0.858, 0.655 )
+texture = ExtResource( 19 )
+offset = Vector2( 26.2261, 347.404 )
+
+[node name="BaseLifeCollitionP1" type="Area2D" parent="PlayerSprite"]
+position = Vector2( 2.079, -70.0462 )
+scale = Vector2( 2.079, 2.25955 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSprite/BaseLifeCollitionP1"]
+position = Vector2( 0, -3.00001 )
+shape = SubResource( 1 )
+
+[node name="AntiAura" type="Area2D" parent="PlayerSprite"]
+light_mask = 3
+scale = Vector2( 0.315, 1 )
+collision_layer = 128
+collision_mask = 128
+
+[node name="AntiAuraCollisionShape" type="CollisionShape2D" parent="PlayerSprite/AntiAura"]
+position = Vector2( 0, -230.475 )
+rotation = 1.57079
+shape = SubResource( 4 )
+
+[node name="PuntosStamina" type="Area2D" parent="PlayerSprite"]
+visible = false
+light_mask = 2
+position = Vector2( 4.158, -48.367 )
+scale = Vector2( 0.614, 1.32 )
+collision_layer = 128
+collision_mask = 128
+
+[node name="PTStaminaCollition" type="CollisionShape2D" parent="PlayerSprite/PuntosStamina"]
+position = Vector2( -2.49436, 111.915 )
+rotation = 0.785397
+scale = Vector2( -19.441, 26.928 )
+shape = SubResource( 7 )
+
+[node name="Chain" type="AudioStreamPlayer2D" parent="PlayerSprite"]
+position = Vector2( 2.079, -9.03822 )
+scale = Vector2( 2.079, 2.25955 )
+stream = ExtResource( 26 )
+volume_db = 3.545
+pitch_scale = 1.86
+autoplay = true
+max_distance = 3439.0
+attenuation = 0.132272
+
+[node name="BellRing" type="AudioStreamPlayer2D" parent="PlayerSprite"]
+position = Vector2( 2.079, -9.03822 )
+scale = Vector2( 2.079, 2.25955 )
+stream = ExtResource( 25 )
+volume_db = 12.316
+pitch_scale = 1.18
+
+[node name="HeavyBreathing" type="AudioStreamPlayer2D" parent="PlayerSprite"]
+position = Vector2( 2.079, -9.03822 )
+scale = Vector2( 2.079, 2.25955 )
+stream = ExtResource( 27 )
+volume_db = 10.636
+pitch_scale = 0.91
+
+[node name="Aura" type="Node2D" parent="."]
+position = Vector2( -1.32198, -0.0432434 )
+scale = Vector2( 0.337, 0.35 )
+
+[node name="AuraSub" type="Node2D" parent="Aura"]
+
+[node name="Aura1" type="Sprite" parent="Aura/AuraSub"]
+position = Vector2( 19.9, 194.191 )
+texture = ExtResource( 6 )
+
+[node name="Aura2" type="Sprite" parent="Aura/AuraSub"]
+visible = false
+position = Vector2( 19.9, 194.191 )
+texture = ExtResource( 10 )
+
+[node name="Aura3" type="Sprite" parent="Aura/AuraSub"]
+visible = false
+position = Vector2( 19.9, 194.191 )
+texture = ExtResource( 11 )
+
+[node name="Aura4" type="Sprite" parent="Aura/AuraSub"]
+visible = false
+position = Vector2( 19.9, 194.191 )
+texture = ExtResource( 12 )
+
+[node name="Aura5" type="Sprite" parent="Aura/AuraSub"]
+visible = false
+position = Vector2( 19.9, 194.191 )
+texture = ExtResource( 13 )
+
+[node name="PlayerSprite2" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.565217, 0.565217 )
+texture = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 12.0
+anims/AnimPlayer = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+playback_speed = 5.0
+anims/Aura = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimationPlayer")
+anims/FixDangModulateError = SubResource( 11 )
+anims/RESET = SubResource( 10 )
+anims/scenesHit = ExtResource( 23 )
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 5
+z_as_relative = false
+
+[node name="Node2D" type="Node2D" parent="Node2D"]
+position = Vector2( -310.273, 227.036 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Fondo" type="Sprite" parent="Node2D/Node2D"]
+visible = false
+position = Vector2( 1711.43, -937.767 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 16 )
+
+[node name="Light2D" type="Light2D" parent="Node2D/Node2D"]
+light_mask = 16384
+position = Vector2( -13.9032, 119.247 )
+scale = Vector2( 1, 0.914 )
+texture = ExtResource( 17 )
+offset = Vector2( -2.45081, -353.461 )
+mode = 2
+
+[node name="BackMedidor" type="Sprite" parent="Node2D/Node2D"]
+light_mask = 2
+position = Vector2( -12.7136, -207.655 )
+texture = ExtResource( 15 )
+
+[node name="BackMedidorP2" type="Sprite" parent="Node2D/Node2D"]
+visible = false
+modulate = Color( 1, 1, 1, 0.678431 )
+light_mask = 2
+position = Vector2( -13.1451, -207.507 )
+texture = ExtResource( 18 )
+
+[node name="BarColor" type="Sprite" parent="Node2D/Node2D"]
+self_modulate = Color( 1, 1, 1, 0.882353 )
+light_mask = 16385
+material = SubResource( 8 )
+position = Vector2( -12.7136, -207.655 )
+texture = ExtResource( 14 )
+
+[node name="Lianas" type="Sprite" parent="Node2D/Node2D"]
+position = Vector2( -12.714, -207.507 )
+texture = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="Node2D/Node2D"]
+self_modulate = Color( 1, 1, 1, 0.384314 )
+margin_left = -99.5461
+margin_top = -74.0051
+margin_right = -37.5461
+margin_bottom = -5.0051
+rect_scale = Vector2( 2.962, 2.994 )
+custom_fonts/font = SubResource( 9 )
+text = "P1
+
+"
+align = 1
+
+[node name="Label2" type="Label" parent="Node2D/Node2D"]
+self_modulate = Color( 1, 1, 1, 0.384314 )
+margin_left = -57.5013
+margin_top = -77.3687
+margin_right = 44.4987
+margin_bottom = -8.36868
+rect_scale = Vector2( 2.962, 2.994 )
+rect_pivot_offset = Vector2( 50.2863, -0.472603 )
+custom_fonts/font = SubResource( 9 )
+text = "
+
+Hearth rate"
+align = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.09
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="Transition" parent="." instance=ExtResource( 24 )]
+position = Vector2( -588.313, -820.244 )
+scale = Vector2( 1.087, 1.15 )
+
+[connection signal="area_entered" from="PlayerSprite/BaseLifeCollitionP1" to="." method="_on_BaseLifeCollitionP1_area_entered"]
+[connection signal="area_exited" from="PlayerSprite/BaseLifeCollitionP1" to="." method="_on_BaseLifeCollitionP1_area_exited"]
+[connection signal="area_entered" from="PlayerSprite/AntiAura" to="." method="_on_AntiAura_area_entered"]
+[connection signal="area_exited" from="PlayerSprite/AntiAura" to="." method="_on_AntiAura_area_exited"]
+[connection signal="animation_finished" from="AnimationPlayer3" to="." method="_on_AnimationPlayer3_animation_finished"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_Timer_timeout"]

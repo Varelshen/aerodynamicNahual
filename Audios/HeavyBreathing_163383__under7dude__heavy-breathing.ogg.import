@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HeavyBreathing_163383__under7dude__heavy-breathing.ogg-2a3e42c6563b6cc341db49b9bcc8dc41.oggstr"
+
+[deps]
+
+source_file="res://Audios/HeavyBreathing_163383__under7dude__heavy-breathing.ogg"
+dest_files=[ "res://.import/HeavyBreathing_163383__under7dude__heavy-breathing.ogg-2a3e42c6563b6cc341db49b9bcc8dc41.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

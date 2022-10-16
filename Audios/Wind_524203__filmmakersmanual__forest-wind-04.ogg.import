@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Wind_524203__filmmakersmanual__forest-wind-04.ogg-2b618b0d36faf2255a48e343e92f95b6.oggstr"
+
+[deps]
+
+source_file="res://Audios/Wind_524203__filmmakersmanual__forest-wind-04.ogg"
+dest_files=[ "res://.import/Wind_524203__filmmakersmanual__forest-wind-04.ogg-2b618b0d36faf2255a48e343e92f95b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

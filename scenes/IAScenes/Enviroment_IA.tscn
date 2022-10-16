@@ -1,0 +1,368 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/EnviromentANIMCode.gd" type="Script" id=1]
+[ext_resource path="res://WorldAssets/Terrain/ParallaxBottom2.jpg" type="Texture" id=2]
+[ext_resource path="res://WorldAssets/Terrain/BaseGroundHeavy.png" type="Texture" id=3]
+[ext_resource path="res://WorldAssets/Terrain/TestObstaclesEntireImgae.jpg" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "MoveAsphalt"
+length = 18.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Asphalt1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6, 12 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1500 ), Vector2( 0, 0 ), Vector2( 0, 1500 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/Asphalt1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/Asphalt2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6, 12, 18 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 1500 ), Vector2( 0, -1500 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/Asphalt2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 6, 12, 18 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/Asphalt3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 6, 12, 18 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1500 ), Vector2( 0, -1500 ), Vector2( 0, 0 ), Vector2( 0, 1500 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/Asphalt3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6, 12, 18 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Asphalt1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/Asphalt1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/Asphalt2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1500 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/Asphalt2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Node2D/Asphalt3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1500 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/Asphalt3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Parallax"
+length = 15.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax/ParallaxBottom:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, 540 ), Vector2( -312, 2040 ), Vector2( -312, -960 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax/ParallaxBottom:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax/ParallaxBottom2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, -960 ), Vector2( -312, 540 ), Vector2( -312, 2040 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax/ParallaxBottom2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax/ParallaxBottom3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5, 10, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -312, -2460 ), Vector2( -312, -960 ), Vector2( -312, 540 ), Vector2( -312, 2040 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax/ParallaxBottom3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax/ParallaxBottom:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, 540 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax/ParallaxBottom:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax/ParallaxBottom2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, -960 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax/ParallaxBottom2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax/ParallaxBottom3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -312, -2460 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax/ParallaxBottom3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Parallax" type="Node2D" parent="."]
+visible = false
+position = Vector2( 381, 0 )
+scale = Vector2( 2.143, 1 )
+
+[node name="ParallaxBottom" type="Sprite" parent="Parallax"]
+position = Vector2( -312, 540 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxBottom2" type="Sprite" parent="Parallax"]
+position = Vector2( -312, -960 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxBottom3" type="Sprite" parent="Parallax"]
+position = Vector2( -312, -2460 )
+texture = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Asphalt1" type="Node2D" parent="Node2D"]
+
+[node name="FondoTest" type="Sprite" parent="Node2D/Asphalt1"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="TestObstaclesEntireImgae" type="Sprite" parent="Node2D/Asphalt1"]
+visible = false
+position = Vector2( 960, 540 )
+texture = ExtResource( 4 )
+
+[node name="Asphalt2" type="Node2D" parent="Node2D"]
+position = Vector2( 0, -1500 )
+
+[node name="FondoTest2" type="Sprite" parent="Node2D/Asphalt2"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="Asphalt3" type="Node2D" parent="Node2D"]
+position = Vector2( 0, -1500 )
+
+[node name="BaseGroundHeavy" type="Sprite" parent="Node2D/Asphalt3"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 1.62
+anims/MoveAsphalt = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+playback_speed = 0.7
+anims/Parallax = SubResource( 3 )
+anims/RESET = SubResource( 4 )

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://WorldAssets/Player/player.jpg" type="Texture" id=1]
+[ext_resource path="res://scripts/Player1Movement.gd" type="Script" id=2]
+
+[node name="Node2D" type="KinematicBody2D"]
+position = Vector2( 960, 540 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 277, 118 )
+
+[node name="Player" type="Sprite" parent="."]
+scale = Vector2( 0.527173, 0.527173 )
+texture = ExtResource( 1 )
